@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr"> 
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Yiming Zhao">
+    <title>World Data Aufgabe 5</title>
+    <link rel="stylesheet" href="reset.css">
+    <link href="style.css" type="text/css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap" rel="stylesheet">   
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+    integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+    crossorigin=""/>
+    <script src="https://kit.fontawesome.com/e62912c20d.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/070f0bbc07.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <header>
+        <nav class="container clearfix">
+            <a class="logo" href="#">world_data</a>
+            <ul id="main_nav">
+                <li><a href="#"><i class="fas fa-table"></i> A1 - Table</a></li>
+                <li><a href="#"><i class="fas fa-cogs"></i> A2 - Parse</a></li>
+                <li><a href="#"><i class="far fa-save"></i> A2 - Save</a></li>
+                <li><a href="#"><i class="fas fa-print"></i> A2 - Print</a></li>
+                <li><a href="#"><i class="fab fa-node"></i> A3 - REST</a></li>
+                <li><a href="#"><i class="fas fa-map-marked-alt"></i> A4 - Vis</a></li>
+                <li><a href="#"><i class="fas fa-cube"></i> A5 - 3D</a></li>            
+            </ul>
+            
+        </nav>
+    </header>
+    <main>
+        <div class="container">
+            <table style="width: 100%;">
+				<tr>
+					<td>
+						<div id="barcontainer">
+							<div id="bar1"></div>
+							<div id="bar2"></div>
+						</div>
+					</td>
+					<td>
+						<select id="labelPicker">
+							<option value="birth_rate_per_1000">birth_rate_per_1000</option>
+							<option value="cell_phones_per_100">cell_phones_per_100</option>
+							<option value="children_per_woman">children_per_woman</option>
+							<option value="electricity_consumption_per_capita">electricity_consumption_per_capita</option>
+							<option value="gdp_per_capita">gdp_per_capita</option>
+							<option value="gdp_per_capita_growth">gdp_per_capita_growth</option>
+							<option value="inflation_annual">inflation_annual</option>
+							<option value="internet_user_per_100">internet_user_per_100</option>
+							<option value="life_expectancy">life_expectancy</option>
+							<option value="military_expenditure_percent_of_gdp">military_expenditure_percent_of_gdp
+							</option>
+
+						</select>
+						<select id="materialPicker">
+							<option value="//unpkg.com/three-globe/example/img/earth-dark.jpg">Dark</option>
+							<option value="//unpkg.com/three-globe/example/img/earth-blue-marble.jpg">Blue</option>
+							<option value="//unpkg.com/three-globe/example/img/earth-day.jpg">Earth Day</option>
+							</option>
+
+						</select>
+						<div id="globeViz" style="height: 1174px; width: 1423px;"></div>
+
+					</td>
+				</tr>
+			</table>
+        </div>
+        
+    </main>
+
+    <script src="map_creator.js"></script>
+    <script src="d3.v5.min.js"></script>
+    <script src="//unpkg.com/three"></script>
+    <script src="//unpkg.com/three/examples/js/controls/TrackballControls.js"></script>
+    <script src="//unpkg.com/three-globe"></script>
+
+    <footer>
+        <div class="container">
+            <div class="left">
+                <p>
+                    Copyright &copy; 2022 world_data<br>
+                    The last course exercise of the lecture Web and Multimedia Engineering.
+                </p>
+            </div>
+            <div class="right">
+                <p>
+                    This solution has been created by:<br>
+                    Yiming Zhao(4905112)
+                </p>
+            </div>
+        </div>
+    </footer>
+    
+
+    
+</body>
+</html>
